@@ -1,15 +1,19 @@
 const User = require('../models/User');
+const NodeRSA = require('node-rsa');
+const key = new NodeRSA({b: 512});
 
 const register = async (req,res,next) => {
 
-    const name="Batuhan Soyhan";
-    const email="batuhansoyhann@gmail.com";
-    const password="123456";
+    const name="Bukeeet";
+    const email="bukett@gmail.com";
+    const password="1234567";
+
+    const encrypted = key.encrypt(password, 'base64');
 
     const user = await User.create({
         name:name,
         email:email,
-        password:password
+        password: encrypted
     });
 
     res
@@ -24,15 +28,3 @@ module.exports= {
     register
 };
 
-
-// const register = (req,res,next)=>{
-//     res
-//     .status(200)
-//     .json({
-//         success:true
-//     });
-// };
-
-// module.exports= {
-//     register
-// };
