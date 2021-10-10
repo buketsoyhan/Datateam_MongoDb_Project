@@ -24,7 +24,7 @@ const UserSchema = new Schema({
         type:String,
         minlength:6,
         required:[true, "Şifre giriniz"],
-        select:false
+        select:true
     }
 });
 

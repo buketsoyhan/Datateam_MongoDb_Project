@@ -1,9 +1,9 @@
-const express = require("express");
-const {getAllQuestions} = require('../controllers/question')
+const express = require('express');
 const router = express.Router();
+const ObjectId = require('mongoose').Types.ObjectId;    
 
-router.get("/", getAllQuestions);
+const { Employee } = require('../models/employee');
 
 
 
-module.exports=router;
+module.exports = router;

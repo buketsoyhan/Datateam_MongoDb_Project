@@ -6,6 +6,11 @@ const getAllQuestions = (req,res,next)=>{
     });
 };
 
+const getData = (req,res,next)=>{
+    res.send("<h1>Merhaba</h1>")
+};
+
 module.exports= {
-    getAllQuestions
+    getAllQuestions,
+    getData
 };
