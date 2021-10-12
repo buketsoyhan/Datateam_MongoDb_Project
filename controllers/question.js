@@ -12,9 +12,6 @@ const getAllQuestions = (req, res, next) => {
 };
 
 const getData = async (req, res, next) => {
-
-
-
   const users = await User.find().exec();
 
   // ** User tablosuna yeni kişi ekleme **
@@ -22,7 +19,7 @@ const getData = async (req, res, next) => {
 
   // ** İsme göre bulma **
   // User.find({ name: 'Budket' }).
-  // then(users => {              
+  // then(users => {
   //   console.log(users[0]); // 'A'
   //   return users[0];
   // }).
@@ -30,9 +27,9 @@ const getData = async (req, res, next) => {
   //   console.log(users[0]); // 'B'
   // });
 
-    // ** İdye göre bulma **
+  // ** İdye göre bulma **
   // User.find({ id: '6165948ab174345764b2c3a3'}).
-  // then(users => {              
+  // then(users => {
   //   console.log(users[0]); // 'A'
   //   return users[0];
   // }).
